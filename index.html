@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RRresidency</title>
+
+<style>
+body
+{
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  background-size:cover
+}
+
+#demo {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+  color:#FF4500;
+ 
+}
+#txt {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0px;
+  color:#FF4500
+}
+
+
+
+.button {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color:#FF8C00;
+  padding: 14px 28px;
+  font-size: 30px;
+  font-family : Brush Script MT, Brush Script Std, cursive;
+  cursor: pointer;
+  text-align: left;
+  color: white;
+  opacity: 1;
+  transition: 0.3s
+}
+
+.button:hover {opacity: 0.6}
+
+#mytab { 
+  width:100%;
+  font-size:15px;
+  border-spacing: 3px;
+  font-family: Didot, serif;
+  font-weight:900;
+  align:center
+}
+
+table
+{
+font-size:20px;
+color:#E65129;
+font-family : Impact, fantasy
+
+
+}
+
+</style>
+
+</head>
+<body background="bck1.png">
+<center>
+<div style = "position:relative; left:1px; top:200px ">
+         
+<img src="hw.gif" width="1200px" height="300px">
+
+</div>
+
+</center>
+
+<div style = "position:relative; left:1px; top:200px ">
+         
+<p id="txt"> The event starts in : </p>
+
+<p id="demo"></p>
+
+</div>
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 24, 2020 4:15:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<div style = "position:relative; left:1px; top:150px ">
+
+<button  class="button" onclick="myFunction1()"> Venue +</button>
+</div>
+
+<div id="myDIV1" style = "position:relative; left:1px; top:160px;display:none ">
+
+<table align="center">
+<tr><td> RR Residency </td> </tr>
+<tr><td> RR Nagar </td> </tr>
+<tr><td> MahendrawadaRoad </td> </tr>
+<tr><td> Eastgodavari </td> </tr>
+<tr><td> Andhrapradesh </td> </tr>
+
+</table>
+
+
+</div>
+
+
+<script>
+
+function myFunction1() {
+  var x = document.getElementById("myDIV1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+else
+{
+x.style.display = "none";
+}
+}
+</script>
+
+
+<br>
+
+
+<div style = "position:relative; left:1px; top:150px ">
+
+<button  class="button" onclick="myFunction()">Events +</button>
+</div>
+
+<div  id="myDIV" style = "position:relative; left:1px; top:200px ;display:none" class="show">
+ 
+<table id="mytab">
+<tr>
+    <td><img src="img1.png" width="150px" height="150px"> </td>
+    <td><img src="img2.png" width="150px" height="150px"></td>
+    <td><img src="img4.jpg" width="150px" height="150px"></td>
+    <td><img src="img3.png" width="150px" height="150px"></td>
+  </tr>
+  <tr>
+    <td>Housewarming</td>
+    <td>Vasthupooja</td>
+    <td>Satyanarayana vratham</td>
+    <td>Lunch</td>
+  </tr>
+  <tr>
+    <td>24thDec,2020 | 4:15am</td>
+    <td>24thDec,2020 | 5:00am</td>
+    <td>24thDec,2020 | 6:00am</td>
+    <td>24thDec,2020 | 12:00pm</td>
+  </tr>
+</table>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  }
+else
+{
+x.style.display = "none";
+}
+}
+</script>
+</body>
+</html>
+
+
+
+
+
